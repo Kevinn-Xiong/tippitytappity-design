@@ -5,6 +5,7 @@ tippitytappity is a program to practice typing
 classDiagram
   User <|-- Player
   Player --> TypingTest
+  TypingTest --> history
 
   class User{
         - name: string
@@ -17,16 +18,22 @@ classDiagram
         - wpm: int
         - accuracy: flaot
         + update_stats(wpm: int, accuracy: float)
-        + get_wpm() int
   }
 
   class TypingTest{
-        - target_text: string
+        - text: string
         - typed_text: string
         - duration_seconds: int
         + calculate_wpm() int
         + calculate_accuracy() float
   }
+
+class history{
+      - wpm: int
+      - accuracy: float
+      + wpm[wpm]
+      + accuracy[accuracy]
+}
 ```
 
 ## Data model

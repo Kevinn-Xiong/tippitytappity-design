@@ -1,7 +1,7 @@
 # tippitytappity-design
 
 tippitytappity is a program to practice typing
-
+'''mermaid
 classDiagram
   User <|-- Player
   Player --> TypingTest
@@ -16,7 +16,7 @@ classDiagram
   class Player{
         - wpm: int
         - accuracy: flaot
-        + update_stats(wpm: float, accuracy: float)
+        + update_stats(wpm: int, accuracy: float)
         + get_wpm() int
   }
 
@@ -27,6 +27,7 @@ classDiagram
         + calculate_wpm() int
         + calculate_accuracy() float
   }
+  '''
 
 ## Data model
 
